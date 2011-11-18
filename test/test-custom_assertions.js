@@ -1,7 +1,7 @@
 var async_testing = require('../lib/async_testing');
 
 if (module == require.main) {
-  return async_testing.run(process.ARGV);
+  return async_testing.run(process.argv);
 }
 
 var assert = require('assert');

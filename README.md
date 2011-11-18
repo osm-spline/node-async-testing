@@ -60,7 +60,7 @@ Example
 
     // if this module is the script being run, then run the tests:
     if (module == require.main) {
-      require('async_testing').run(__filename, process.ARGV);
+      require('async_testing').run(__filename, process.argv);
     }
 
 The above file can be run on the command line with:
@@ -232,7 +232,7 @@ were in a file called `test-suite.js`):
 
     node test-suite.js
 
-Additionally, the `run` method can be passed the `process.ARGV` array of command
+Additionally, the `run` method can be passed the `process.argv` array of command
 line arguments, so **node-async-testing** settings can be altered at run time:
 
     exports['first test'] = function(test) { ... };
@@ -240,7 +240,7 @@ line arguments, so **node-async-testing** settings can be altered at run time:
     exports['third test'] = function(test) { ... };
 
     if (module === require.main) {
-      require('async_testing').run(__filename, process.ARGV);
+      require('async_testing').run(__filename, process.argv);
     }
 
 Now, you could tell **node-async-testing** to run the tests in parallel:

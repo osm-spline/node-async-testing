@@ -94,14 +94,14 @@
         <div class="highlight"><pre>node <span class="nb">test</span>-suite.js</pre></div>
 
         <p>
-        The <code>run</code> function can also be passed the <code>process.ARGV</code>
+        The <code>run</code> function can also be passed the <code>process.argv</code>
         array of command line arguments, so <b>node-async-testing</b> settings can
         be altered at run time:
         </p>
 
         <div class="highlight"><pre>
 <span class="k">if</span> <span class="p">(</span><span class="nx">module</span> <span class="o">===</span> <span class="nx">require</span><span class="p">.</span><span class="nx">main</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async_testing&#39;</span><span class="p">).</span><span class="nx">run</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">ARGV</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async_testing&#39;</span><span class="p">).</span><span class="nx">run</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nx">exports</span><span class="p">[</span><span class="s1">&#39;first test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">};</span>
@@ -129,7 +129,7 @@
 
         <p>
         <b>node-async-testing</b> can run multiple files at once this way, because 
-        additional files will get passed with <code>process.ARGV</code>:
+        additional files will get passed with <code>process.argv</code>:
         </p>
 
         <div class="highlight"><pre>node <span class="nb">test</span>-suite.js <span class="nb">test</span>-suite2.js</pre></div>
@@ -326,7 +326,7 @@
               a suite object.
               </li>
               <li>
-              An array of command line arguments, like <code>process.ARGV</code>.
+              An array of command line arguments, like <code>process.argv</code>.
               </li>
               <li>
               An options object, for manipulating the options for the function directly.  The
@@ -362,13 +362,13 @@
 
 
             <p>Use command line arguments:</p>
-            <div class="highlight"><pre>async_testing.run<span class="o">(</span>process.ARGV<span class="o">)</span>;</pre></div>
+            <div class="highlight"><pre>async_testing.run<span class="o">(</span>process.argv<span class="o">)</span>;</pre></div>
 
             <p>Use command line arguments with defaults:</p>
-            <div class="highlight"><pre>async_testing.run<span class="o">({</span>parallel: <span class="nb">true</span><span class="o">}</span>, process.ARGV<span class="o">)</span>;</pre></div>
+            <div class="highlight"><pre>async_testing.run<span class="o">({</span>parallel: <span class="nb">true</span><span class="o">}</span>, process.argv<span class="o">)</span>;</pre></div>
 
             <p>Overwrite command line arguments:</p>
-            <div class="highlight"><pre>async_testing.run<span class="o">(</span>process.ARGV, <span class="o">{</span>parallel: <span class="nb">true</span><span class="o">})</span>;</pre></div>
+            <div class="highlight"><pre>async_testing.run<span class="o">(</span>process.argv, <span class="o">{</span>parallel: <span class="nb">true</span><span class="o">})</span>;</pre></div>
           </dd>
 
           <dt id="registerRunner"><code>registerRunner(modulePath, [default])</code></dt>

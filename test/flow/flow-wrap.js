@@ -6,7 +6,7 @@
 // it is doing what you want.
 
 if (module == require.main) {
-  return require('../../lib/async_testing').run(process.ARGV, function() {/* do nothing */});
+  return require('../../lib/async_testing').run(process.argv, function() {/* do nothing */});
 }
 
 var async_testing = require('../../lib/async_testing')

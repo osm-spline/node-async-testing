@@ -3,7 +3,7 @@ var async_testing = require('../lib/async_testing')
   ;
 
 if (module == require.main) {
-  return async_testing.run(process.ARGV);
+  return async_testing.run(process.argv);
 }
 
 var extra1 = {}, extra2 = {};
@@ -80,5 +80,5 @@ wrap( { suite: module.exports
 
 
 if (module == require.main) {
-  async_testing.run(__filename, process.ARGV);
+  async_testing.run(__filename, process.argv);
 }

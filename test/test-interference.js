@@ -1,5 +1,5 @@
 if (module == require.main) {
-  return require('async_testing').run(process.ARGV);
+  return require('async_testing').run(process.argv);
 }
 
 require('../lib/child')
