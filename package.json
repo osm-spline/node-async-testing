@@ -8,7 +8,7 @@
   { "type": "git"
   , "url": "http://github.com/bentomas/node-async-testing.git"
   }
-, "bugs": { "web": "http://github.com/bentomas/node-async-testing/issues" }
+, "bugs": { "url": "http://github.com/bentomas/node-async-testing/issues" }
 , "licenses":
   [ { "type": "MIT"
     , "url": "http://github.com/bentomas/node-async-testing/blob/master/LICENSE"
